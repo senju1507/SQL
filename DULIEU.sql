@@ -82,15 +82,3 @@ VALUES
 ('L06', 'T06', 2000000),
 ('L07', 'T07', 2200000),
 ('L08', 'T08', 2500000);
---Thêm số lượng xe
-ALTER TABLE Xe ADD SoLuong INT NOT NULL DEFAULT 1;
-UPDATE Xe SET SoLuong = 10 WHERE MaLoai = 'L01';
-UPDATE Xe SET SoLuong = 8 WHERE MaLoai = 'L02';
-UPDATE Xe SET SoLuong = 5 WHERE MaLoai = 'L03';
-UPDATE Xe SET SoLuong = 3 WHERE MaLoai = 'L04';
-UPDATE Xe SET SoLuong = 2 WHERE MaLoai = 'L05';
-UPDATE Xe SET SoLuong = 7 WHERE MaLoai = 'L06';
-UPDATE Xe SET SoLuong = 6 WHERE MaLoai = 'L07';
-UPDATE Xe SET SoLuong = 4 WHERE MaLoai = 'L08';
-UPDATE Xe SET SoLuong = 5 WHERE MaLoai = 'L09';
-UPDATE Xe SET SoLuong = 9 WHERE MaLoai = 'L10';

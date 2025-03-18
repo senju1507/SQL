@@ -22,7 +22,7 @@ BEGIN
     RETURN @GiaThue;
 END;
 
-SELECT dbo.fn_GetGiaThue('L02', 'T05') AS GiaThue;
+SELECT dbo.fn_GetGiaThue('L04', 'T02') AS GiaThue;
 --3. Tính tổng số lượng xe đã thuê theo hợp đồng
 CREATE FUNCTION fn_TongSoLuongXeThue (@SoHD NVARCHAR(10))
 RETURNS INT
@@ -57,7 +57,7 @@ RETURN
     WHERE DienThoai = @DienThoai
 );
 
-SELECT * FROM dbo.fn_GetKhachByPhone('0987654321');
+SELECT * FROM dbo.fn_GetKhachByPhone('03737909570');
 --6. Lấy danh sách hợp đồng thuê theo tuyến
 CREATE FUNCTION fn_GetHopDongByTuyen (@MaTuyen NVARCHAR(10))
 RETURNS TABLE

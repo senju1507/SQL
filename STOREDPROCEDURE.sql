@@ -66,7 +66,7 @@ BEGIN
     VALUES (@MaKhach, @TenKhach, @DienThoai);
 END;
 
-EXEC sp_InsertKhach 'KH06', 'Công ty DEF', '999888777';
+EXEC sp_InsertKhach 'KH12', 'Công ty DEF', '999888777';
 --8.Tính tổng số xe thuê theo hợp đồng  (Có OUTPUT)
 CREATE PROCEDURE sp_GetTongXeThue
     @SoHD NVARCHAR(10),

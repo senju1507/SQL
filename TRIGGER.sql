@@ -18,7 +18,7 @@ BEGIN
 END;
 
 INSERT INTO HopDongThue (SoHD, MaKhach, MaLoai, SoLuongXe, MaTuyen, NgayDi, NgayVe)
-VALUES ('HD10', 'KH02', 'L03', 2, 'T05', '2026-01-01', '2026-01-10');  -- Lỗi nếu ngày đi < hôm nay
+VALUES ('HD12', 'KH02', 'L03', 2, 'T05', '2026-01-01', '2026-01-10');  -- Lỗi nếu ngày đi < hôm nay
 
 /*2.Trigger tự động cập nhật số lượng xe sau khi thuê.
 Trigger này giảm số lượng xe có sẵn sau khi lập hợp đồng thuê xe.*/
@@ -35,10 +35,10 @@ END;
 
 
 INSERT INTO HopDongThue (SoHD, MaKhach, MaLoai, SoLuongXe, MaTuyen, NgayDi, NgayVe)
-VALUES ('HD11', 'KH05', 'L02', 1, 'T05', '2025-05-01', '2025-05-10');
+VALUES ('HD13', 'KH05', 'L02', 1, 'T05', '2025-05-01', '2025-05-10');
 
 SELECT * FROM Xe WHERE MaLoai = 'L02';  -- Kiểm tra số lượng xe có giảm hay không
-/*3.rigger không cho xóa khách hàng khi còn hợp đồng thuê
+/*3.Trigger không cho xóa khách hàng khi còn hợp đồng thuê
 Trigger này ngăn chặn việc xóa khách hàng nếu họ còn hợp đồng thuê xe.*/
 CREATE TRIGGER trg_CheckKhachHangBeforeDelete
 ON Khach
@@ -80,7 +80,7 @@ END;
 
 
 INSERT INTO HopDongThue (SoHD, MaKhach, MaLoai, SoLuongXe, MaTuyen, NgayDi, NgayVe)
-VALUES ('HD12', 'KH03', 'L01', 20, 'T04', '2025-06-01', '2025-06-05'); -- Lỗi nếu số lượng > số lượng xe có sẵn
+VALUES ('HD14', 'KH03', 'L01', 20, 'T04', '2025-06-01', '2025-06-05'); -- Lỗi nếu số lượng > số lượng xe có sẵn
 /* 5.Trigger tự động ghi log khi có hợp đồng mới
 Trigger này ghi lại thông tin hợp đồng mới vào bảng LogHopDong.*/
 CREATE TABLE LogHopDong (
@@ -101,6 +101,6 @@ BEGIN
 END;
 
 INSERT INTO HopDongThue (SoHD, MaKhach, MaLoai, SoLuongXe, MaTuyen, NgayDi, NgayVe)
-VALUES ('HD4', 'KH05', 'L04', 2, 'T03', '2025-07-01', '2025-07-10');
+VALUES ('HD15', 'KH05', 'L04', 2, 'T03', '2025-07-01', '2025-07-10');
 
 SELECT * FROM LogHopDong;  -- Kiểm tra log có ghi nhận hợp đồng mới không
